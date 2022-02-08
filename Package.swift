@@ -13,7 +13,7 @@ let package = Package(
                 "KafkaRefresh",
                 "Category",
                 "Configuration",
-                "Core",
+                "KRCore",
                 "Default",
                 "Style",
                 "FootKit",
@@ -31,7 +31,7 @@ let package = Package(
             dependencies: [
                 .target(name: "Category"),
                 .target(name: "Configuration"),
-                .target(name: "Core"),
+                .target(name: "KRCore"),
                 .target(name: "Default"),
                 .target(name: "Style"),
                 .target(name: "FootKit"),
@@ -43,6 +43,7 @@ let package = Package(
             resources: [.process("Resource")],
             publicHeadersPath: "Public"
         ),
+        // Members
         .target(
             name: "Category",
             dependencies: [],
@@ -68,11 +69,11 @@ let package = Package(
             ]
         ),
         .target(
-            name: "Core",
+            name: "KRCore",
             dependencies: [
                 .target(name: "Category")
             ],
-            path: "KafkaRefresh/Core",
+            path: "KafkaRefresh/KRCore",
             exclude: ["Public"],
             publicHeadersPath: "Public",
             linkerSettings: [
@@ -104,7 +105,7 @@ let package = Package(
             dependencies: [
                 .target(name: "LayerKit"),
                 .target(name: "Category"),
-                .target(name: "Core"),
+                .target(name: "KRCore"),
                 .target(name: "Default"),
                 .target(name: "Style")
             ],
@@ -117,7 +118,7 @@ let package = Package(
             dependencies: [
                 .target(name: "LayerKit"),
                 .target(name: "Category"),
-                .target(name: "Core"),
+                .target(name: "KRCore"),
                 .target(name: "Default"),
                 .target(name: "Style")
             ],
