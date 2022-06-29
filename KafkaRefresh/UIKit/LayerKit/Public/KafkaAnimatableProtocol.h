@@ -8,6 +8,7 @@
 
 #ifndef KafkaAnimatableProtocol_h
 #define KafkaAnimatableProtocol_h
+#import <Foundation/Foundation.h>
 
 @protocol KafkaAnimatableProtocol<NSObject>
 

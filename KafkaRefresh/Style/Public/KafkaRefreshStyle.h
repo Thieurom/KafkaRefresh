@@ -8,6 +8,7 @@
  * This source code is licensed under the MIT license.
  *************************************************************/
 
+#import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger,KafkaRefreshStyle) {
 	//Native
